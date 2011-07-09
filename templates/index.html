@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block content %}
+	<h1>Loveboard</h1>
+	<p>Real time dashboard for likes and +1s.</p>
+	
+	<table border="0" id="loves">
+		<tr>
+			<th class="id">ID</th>
+			<th class="action">Action, Page and User Agent</th>
+			<th class="created">Created at</th>
+		</tr>
+		{% for like in likes %}
+		<tr>
+			<td>{{ like.id }}</td>
+			<td>
+				<strong>{{ like.action }}</strong> {{ like.page }}<br>
+				<span class="user-agent">{{ like.user_agent}}</span>
+			</td>
+			<td>{{ like.created_at }}</td>
+		{% endfor %}
+	</table>
+{% endblock %}
+
+{% block footerscripts %}
+<script>
+    // Enable pusher logging - don't include this in production
+    Pusher.log = function(message) {
+      if (window.console && window.console.log) window.console.log(message);
+    };
+
+    // Flash fallback logging - don't include this in production
+    WEB_SOCKET_DEBUG = true;
+
+    var pusher = new Pusher('0dcbb48772f95ddd1551');
+    var channel = pusher.subscribe('love');
+    channel.bind('create', function(data) {
+      log(data);
+    });
+  </script>
+{% endblock %}

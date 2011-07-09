@@ -1,0 +1,6 @@
+[submodule "src/vendors/Twig"]
+	path = src/vendors/Twig
+	url = git://github.com/fabpot/Twig.git
+[submodule "src/vendors/Pusher-PHP"]
+	path = src/vendors/Pusher-PHP
+	url = git://github.com/squeeks/Pusher-PHP.git
