@@ -2,10 +2,22 @@
 
 Realtime dashboard for likes and +1s. Notifies you in a browser window about new likes and +1s on another page in real time. This is a technology demo and not intended for use in a production environment.
 
+Loveboard currently uses [Pusher](http://pusher.com) and PHP, but maybe there will be a [node.js](http://nodejs.org/)/[Socket.IO](http://socket.io/) version at some point in the future.
 
 ## Author
 
 [Florian Eckerstorfer](http://florianeckerstorfer.com)
+
+
+## Technologies, Libraries and Toolkits
+
+- [HTML5 Boilerplate](http://html5boilerplate.com/)
+- [jQuery](http://jquery.com/)
+- [jQuery UI](http://jqueryui.com/)
+- [Pusher](http://pusher.com/)
+- [Twig](http://www.twig-project.org/)
+
+Made with TextMate.
 
 
 ## License
