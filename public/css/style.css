@@ -208,16 +208,27 @@ a:hover {
 	margin: 0 auto;
 }
 
-#loves td {
-	vertical-align: top;
+#loves,
+#loves ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
 }
 
-#loves tr:nth-child(even) {
+#loves .header {
+	font-weight: bold;
+}
+
+#loves .row:nth-child(even) {
 	background: #efefef;
 }
 
-#loves td,
-#loves th {
+#loves .row.new-row {
+	background: yellow;
+}
+
+#loves .row li {
+	float: left;
 	padding: 3px;
 }
 
@@ -232,6 +243,7 @@ a:hover {
 #loves .created_at {
 	width: 140px;
 }
+
 
 .user-agent {
 	font: 11px 'Courier New', Courier, monospace;
