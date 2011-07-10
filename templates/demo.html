@@ -8,12 +8,17 @@
 		separate window and click the like and +1 buttons.
 	
 	<p><div id="fb-root"></div><fb:like href="http://loveboard.theroadtojoy.at/demo.php" send="false" width="450" show_faces="true" font=""></fb:like>
+		
+	<p><g:plusone callback="createPlusOne"></g:plusone>
 	
 {% endblock %}
 
 {% block footerscripts %}
-<script src="http://connect.facebook.net/en_US/all.js#appId=202380923146576&amp;xfbml=1"></script>
 <script>
+	function createPlusOne(response) {
+		createLove(response.state == 'on' ? '+1' : '-1', response.href);
+	}
+
 	function createLove(action, page)
 	{
 		$.post('ajax.php', { 'action': action, 'page': page, 'user_agent': navigator.userAgent },

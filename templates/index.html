@@ -29,12 +29,12 @@
 {% block footerscripts %}
 <script>
     // Enable pusher logging - don't include this in production
-    Pusher.log = function(message) {
-      if (window.console && window.console.log) window.console.log(message);
-    };
+    // Pusher.log = function(message) {
+    //   if (window.console && window.console.log) window.console.log(message);
+    // };
 
     // Flash fallback logging - don't include this in production
-    WEB_SOCKET_DEBUG = true;
+    // WEB_SOCKET_DEBUG = true;
 
     var pusher = new Pusher('0dcbb48772f95ddd1551');
     var channel = pusher.subscribe('love');
