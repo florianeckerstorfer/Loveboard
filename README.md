@@ -18,7 +18,7 @@ As mentioned above, Loveboard is intended to be a technology demonstration and i
 1. `git submodule update`
 1. `cp data/pusher.php.sample data/pusher.php`
 1. Change the three constants in `data/pusher.php`.
-1. chmod -R 777 data/
+1. `chmod -R 777 data/`
 
 
 ## Technologies, Libraries and Toolkits
