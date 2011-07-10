@@ -12,31 +12,3 @@
 	<p><g:plusone callback="createPlusOne"></g:plusone>
 	
 {% endblock %}
-
-{% block footerscripts %}
-<script>
-	function createPlusOne(response) {
-		createLove(response.state == 'on' ? '+1' : '-1', response.href);
-	}
-
-	function createLove(action, page)
-	{
-		$.post('ajax.php', { 'action': action, 'page': page, 'user_agent': navigator.userAgent },
-			function(data) {
-				log(data);
-			}
-		);
-	}
-
-	FB.Event.subscribe('edge.create', function(response) {
-		createLove('like', response);
-		log('liked');
-		log(response);
-	});
-	FB.Event.subscribe('edge.remove', function(response) {
-		createLove('unlike', response);
-		log('unlicked');
-		log(response);
-	})
-</script>
-{% endblock %}
