@@ -4,9 +4,17 @@ Realtime dashboard for likes and +1s. Notifies you in a browser window about new
 
 Loveboard currently uses [Pusher](http://pusher.com) and PHP, but maybe there will be a [node.js](http://nodejs.org/)/[Socket.IO](http://socket.io/) version at some point in the future.
 
+
 ## Author
 
 [Florian Eckerstorfer](http://florianeckerstorfer.com)
+
+
+## Demonstration
+
+You can try Loveboard by opening the [Dashboard](http://loveboard.theroadtojoy.at) and the [Demo](http://loveboard.theroadtojoy.at/demo.php) in two separate windows, position them side by side and clicking the Like and +1 buttons.
+
+Please note: The demonstration uses the free Sandbox plan of Pusher and therefore only allows 20 connections and 100,000 messages per day. If these limits are exceeded, the demonstration will no longer work on this day.
 
 
 ## Installation
