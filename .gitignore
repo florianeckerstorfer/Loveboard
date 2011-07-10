@@ -1,2 +1,4 @@
 Loveboard.tmproj
 data/pusher.php
+.DS_Store
+cache/*
