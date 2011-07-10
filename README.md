@@ -9,6 +9,18 @@ Loveboard currently uses [Pusher](http://pusher.com) and PHP, but maybe there wi
 [Florian Eckerstorfer](http://florianeckerstorfer.com)
 
 
+## Installation
+
+As mentioned above, Loveboard is intended to be a technology demonstration and is definitely not ready for production use. If you want to play around or contribute to the project, here is some advice how to install Loveboard.
+
+1. `git clone git://github.com/florianeckerstorfer/Loveboard.git ./`
+1. `git submodule init`
+1. `git submodule update`
+1. `cp data/pusher.php.sample data/pusher.php`
+1. Change the three constants in `data/pusher.php`.
+1. chmod -R 777 data/
+
+
 ## Technologies, Libraries and Toolkits
 
 - [HTML5 Boilerplate](http://html5boilerplate.com/)
