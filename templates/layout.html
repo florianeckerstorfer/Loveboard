@@ -1,86 +1,54 @@
 <!doctype html>
-<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
 <html class="no-js" lang="en" xmlns:fb="http://www.facebook.com/2008/fbml">
 <head>
   <meta charset="utf-8">
-
-  <!-- Use the .htaccess and remove these lines to avoid edge case issues.
-       More info: h5bp.com/b/378 -->
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
   <title>{% block title %}Loveboard{% endblock %}</title>
   <meta name="description" content="Loveboard is a real time dashboard for likes and +1s.">
   <meta name="author" content="Florian Eckerstorfer">
-
-  <!-- Mobile viewport optimized: j.mp/bplateviewport -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
-
-  <!-- CSS: implied media="all" -->
   <link rel="stylesheet" href="css/style.css">
-
-  <!-- More ideas for your <head> here: h5bp.com/docs/#head-Tips -->
-
-  <!-- All JavaScript at the bottom, except for Modernizr and Respond.
-       Modernizr enables HTML5 elements & feature detects; Respond is a polyfill for min/max-width CSS3 Media Queries
-       For optimal performance, use a custom Modernizr build: www.modernizr.com/download/ -->
   <script src="js/libs/modernizr-2.0.min.js"></script>
   <script src="js/libs/respond.min.js"></script>
+  <link rel="icon" type="image/png" href="favicon.png">
 </head>
 
 <body>
 
   <div id="container">
-    <header>
-
-    </header>
     <div id="main" role="main">{% block content %}{% endblock %}</div>
     <footer>
-        <p><small>&copy; 2011 <a href="http://florianeckerstorfer.com">Florian Eckerstorfer</a>
-          | Twitter: @<a href="http://twitter.com/braincrafted">braincrafted</a>
-          | <a href="http://florianeckerstorfer.tumblr.com">Tumblr</a></small></p>
+        <p><small>Handcrafted by <a href="http://florianeckerstorfer.com">Florian Eckerstorfer</a> in Vienna.
+          | @<a href="http://twitter.com/Florian_">Florian_</a>.</small></p>
     </footer>
-  </div> <!--! end of #container -->
+  </div>
 
-<a href="http://github.com/florianeckerstorfer/loveboard"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://gs1.wac.edgecastcdn.net/80460E/assets/img/bec6c51521dcc8148146135149fe06a9cc737577/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub"></a>
-
-
-  <!-- JavaScript at the bottom for fast page loading -->
-
-  <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="js/libs/jquery-1.6.1.min.js"><\/script>')</script>
 
   <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.8.14/jquery-ui.min.js"></script>
   <script>window.jQuery || document.write('<script src="js/libs/jquery-ui-1.8.14.min.js"><\/script>')</script>
 
-  <!-- Pusher, Facebook and Plus One Libraries -->
   <script src="http://js.pusherapp.com/1.8/pusher.min.js" type="text/javascript"></script>
   <script src="http://connect.facebook.net/en_US/all.js#appId=202380923146576&amp;xfbml=1"></script><div id="fb-root"></div>
   <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
 
-
-  <!-- scripts concatenated and minified via ant build script-->
   <script src="js/plugins.js"></script>
   <script src="js/script.js"></script>
-  <!-- end scripts-->
-	
-  <!-- mathiasbynens.be/notes/async-analytics-snippet Change UA-XXXXX-X to be your site's ID -->
+
   <script>
-    var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview'],['_trackPageLoadTime']];
+    var _gaq=[['_setAccount','UA-26992220-1'],['_setDomainName', 'loveboard.theroadtojoy.at'],['_trackPageview'],['_trackPageLoadTime']];
     (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
     g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
     s.parentNode.insertBefore(g,s)}(document,'script'));
   </script>
 
-
-  <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you want to support IE 6.
-       chromium.org/developers/how-tos/chrome-frame-getting-started -->
   <!--[if lt IE 7 ]>
     <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
     <script>window.attachEvent("onload",function(){CFInstall.check({mode:"overlay"})})</script>
   <![endif]-->
-  
+
 </body>
 </html>
